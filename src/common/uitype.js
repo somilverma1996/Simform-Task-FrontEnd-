@@ -1,0 +1,1 @@
+export const UITYPE = { TEXT: 0, CHK: 1, RADIO: 2};

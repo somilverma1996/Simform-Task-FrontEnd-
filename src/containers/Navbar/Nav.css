@@ -1,0 +1,9 @@
+a {
+    color: white !important;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.bg-dark {
+    background-color: black !important;
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Questions Executes a handler function must call the mock method with button click 1`] = `null`;
+
+exports[`Questions MAtches the component snapshot made  must call the mock method with button click 1`] = `null`;
+
+exports[`Questions Matches the component snapshot made  must call the mock method with button click 1`] = `null`;
+
+exports[`Questions Simulate click event must call the mock method with button click 1`] = `
+<Connect(QuestionForm)
+  id="btnSubmit"
+/>
+`;
