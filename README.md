@@ -39,9 +39,9 @@ To make a sharable link of netlify run the following command
 
     `netlify deploy`
 
-The above command asks for authentication first, will directly open a tab to enter credentials in defauly browser
+The above command asks for authentication first, will directly open a tab to enter credentials in default browser.
 
-After authentication it asks for the Publish Directory, that basically is required to point to from where we need to deploy. Here we need to pass "build" here.
+After authentication it asks for the Publish Directory, that basically is required to point to from where we need to deploy. Here we need to pass "build".
 
     Publish directory /media/somil/db95795c-7cfe-467f-8422-9f9f8a6b2fc7/var/www/html/Assignment/
 
