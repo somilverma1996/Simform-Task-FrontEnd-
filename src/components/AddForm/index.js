@@ -119,8 +119,6 @@ const QuestionForm = (props) => {
                                     }]);
 
                                 }}>
-                                default:
-                                return true
                                     <h4 className="mt-2">{index + 1} . {ele.question}</h4>
                                     {
                                         ele.options.split("\n").map((option) => {

@@ -40,7 +40,6 @@ export const saveRequest = () => {
           headers: headers,
         })
         .then((response) => {
-          debugger;
           console.log(response.data)
           const forms = response.data;
           dispatch(saveSuccess(forms));
