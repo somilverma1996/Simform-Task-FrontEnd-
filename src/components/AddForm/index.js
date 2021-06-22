@@ -22,8 +22,8 @@ const QuestionForm = (props) => {
                     <h5 className="card-title">Give your form a name</h5>
                     <p className="card-text">
                         <Input type="text" placeholder="Enter Form Name" id="formname" className="mb-4" onChange={(e) => {
-                            if(e.target.value.startsWith(" ")){
-                                return 
+                            if (e.target.value.startsWith(" ")) {
+                                return
                             }
                             props.validate(e.target.value)
                             setName(e.target.value);
@@ -75,14 +75,16 @@ const QuestionForm = (props) => {
                                     <h4 className="mt-2">{index + 1} . {ele.question}</h4>
                                     {
                                         ele.options.split("\n").map((option) => {
-                                            return <div className="form-check">
-                                                <input className="form-check-input" disabled type="radio"
-                                                    name={"element" + index}
-                                                    id={"element" + index} value={option} />
-                                                <label className="form-check-label" htmlFor={"element" + index}>
-                                                    {option}
-                                                </label>
-                                            </div>
+                                            if (option.trim()) {
+                                                return <div className="form-check">
+                                                    <input className="form-check-input" disabled type="radio"
+                                                        name={"element" + index}
+                                                        id={"element" + index} value={option} />
+                                                    <label className="form-check-label" htmlFor={"element" + index}>
+                                                        {option}
+                                                    </label>
+                                                </div>
+                                            }
                                         })
                                     }
                                 </div>
@@ -122,6 +124,7 @@ const QuestionForm = (props) => {
                                     <h4 className="mt-2">{index + 1} . {ele.question}</h4>
                                     {
                                         ele.options.split("\n").map((option) => {
+                                            if (option.trim()) {
                                             return <div className="form-check">
                                                 <input className="form-check-input" disabled type="checkbox"
                                                     value={option} id={"element" + index} />
@@ -129,6 +132,7 @@ const QuestionForm = (props) => {
                                                     {option}
                                                 </label>
                                             </div>
+                                            }
                                         })
                                     }
                                 </div>

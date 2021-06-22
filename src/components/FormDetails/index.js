@@ -92,14 +92,16 @@ const FormDetails = (props) => {
                                     <h6 className="mt-2">{ele.question}</h6>
                                     {
                                         ele.options.split("\n").map((option) => {
-                                            return <div className="form-check">
-                                                <input className="form-check-input" type="radio"
-                                                    name={"element" + index}
-                                                    id={"element" + index} value={option} />
-                                                <label className="form-check-label" htmlFor={"element" + index}>
-                                                    {option}
-                                                </label>
-                                            </div>
+                                            if (option.trim()) {
+                                                return <div className="form-check">
+                                                    <input className="form-check-input" type="radio"
+                                                        name={"element" + index}
+                                                        id={"element" + index} value={option} />
+                                                    <label className="form-check-label" htmlFor={"element" + index}>
+                                                        {option}
+                                                    </label>
+                                                </div>
+                                            }
                                         })
                                     }
                                 </div>
@@ -139,13 +141,15 @@ const FormDetails = (props) => {
                                     <h6 className="mt-2">{ele.question}</h6>
                                     {
                                         ele.options.split("\n").map((option) => {
-                                            return <div className="form-check">
-                                                <input className="form-check-input" type="checkbox"
-                                                    value={option} id={"element" + index} />
-                                                <label className="form-check-label" htmlFor={"element" + index}>
-                                                    {option}
-                                                </label>
-                                            </div>
+                                            if (option.trim()) {
+                                                return <div className="form-check">
+                                                    <input className="form-check-input" type="checkbox"
+                                                        value={option} id={"element" + index} />
+                                                    <label className="form-check-label" htmlFor={"element" + index}>
+                                                        {option}
+                                                    </label>
+                                                </div>
+                                            }
                                         })
                                     }
                                 </div>
